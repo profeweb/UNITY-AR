@@ -6,7 +6,7 @@ public class RandomSpawnerObject : MonoBehaviour
 {
 
     public GameObject[] objectsToSpawn;
-    private int objectSizeMax = 5;
+    private float objectSizeMax = 0.5F;
     private PlacementIndicator placementIndicator;
 
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class RandomSpawnerObject : MonoBehaviour
             placementIndicator.transform.position,
             placementIndicator.transform.rotation);
 
-            int randomSize = Random.Range(0, objectSizeMax);
+            float randomSize = Random.Range(0, objectSizeMax);
             obj.transform.localScale = Vector3.one * randomSize;
         }
     }
